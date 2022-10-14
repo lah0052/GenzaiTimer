@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/genzai-timer-final'),
+      dir: require('path').join(__dirname, './coverage/genzai-timer'),
       subdir: '.',
       reporters: [
         { type: 'html' },
