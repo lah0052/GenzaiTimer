@@ -1,2 +1,2 @@
 # Take2GenzaiTimer
-pls god
+pls god pls
