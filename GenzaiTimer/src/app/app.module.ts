@@ -11,6 +11,7 @@ import {SideNavbarComponent} from './home-components/side-navbar/side-navbar.com
 import { TempTimerComponent } from './home-components/temp-timer/temp-timer.component';
 
 import { TaskListComponent } from './home-components/task-list/task-list.component';
+import { NotificationComponent } from './home-components/notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TaskListComponent } from './home-components/task-list/task-list.compone
     TempTimerComponent,
     TaskListComponent,
     PlannerLayoutComponent,
-    SideNavbarComponent
+    SideNavbarComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,
