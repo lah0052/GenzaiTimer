@@ -8,12 +8,19 @@ import { JournalLayoutComponent } from './journal-layout/journal-layout.componen
 import { PlannerLayoutComponent } from './planner-layout/planner-layout.component';
 import {SideNavbarComponent} from './home-components/side-navbar/side-navbar.component';
 
+import { TempTimerComponent } from './home-components/temp-timer/temp-timer.component';
+
+import { TaskListComponent } from './home-components/task-list/task-list.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeLayoutComponent,
     SettingsLayoutComponent,
     JournalLayoutComponent,
+    PlannerLayoutComponent,
+    TempTimerComponent,
+    TaskListComponent,
     PlannerLayoutComponent,
     SideNavbarComponent
   ],
