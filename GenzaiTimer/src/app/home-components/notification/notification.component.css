@@ -1,4 +1,8 @@
 .Container2{
+    color: black;
+}
+
+.Container2{
     height: 90px;
     width: 120px;
     float: right;
