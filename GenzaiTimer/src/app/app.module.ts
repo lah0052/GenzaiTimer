@@ -6,6 +6,7 @@ import { HomeLayoutComponent } from './home-layout/home-layout.component';
 import { SettingsLayoutComponent } from './settings-layout/settings-layout.component';
 import { JournalLayoutComponent } from './journal-layout/journal-layout.component';
 import { PlannerLayoutComponent } from './planner-layout/planner-layout.component';
+import {SideNavbarComponent} from './home-components/side-navbar/side-navbar.component';
 
 import { TempTimerComponent } from './home-components/temp-timer/temp-timer.component';
 
@@ -20,7 +21,8 @@ import { TaskListComponent } from './home-components/task-list/task-list.compone
     PlannerLayoutComponent,
     TempTimerComponent,
     TaskListComponent,
-    PlannerLayoutComponent
+    PlannerLayoutComponent,
+    SideNavbarComponent
   ],
   imports: [
     BrowserModule,
