@@ -7,6 +7,7 @@ import { HomeLayoutComponent } from './home-layout/home-layout.component';
 import { SettingsLayoutComponent } from './settings-layout/settings-layout.component';
 import { JournalLayoutComponent } from './journal-layout/journal-layout.component';
 import { PlannerLayoutComponent } from './planner-layout/planner-layout.component';
+import { SideNavbarComponent } from './home-components/side-navbar/side-navbar.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PlannerLayoutComponent } from './planner-layout/planner-layout.componen
     HomeLayoutComponent,
     SettingsLayoutComponent,
     JournalLayoutComponent,
-    PlannerLayoutComponent
+    PlannerLayoutComponent,
+    SideNavbarComponent
   ],
   imports: [
     BrowserModule,
