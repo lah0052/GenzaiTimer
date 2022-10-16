@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeLayoutComponent } from './home-layout/home-layout.component';
@@ -8,6 +7,8 @@ import { SettingsLayoutComponent } from './settings-layout/settings-layout.compo
 import { JournalLayoutComponent } from './journal-layout/journal-layout.component';
 import { PlannerLayoutComponent } from './planner-layout/planner-layout.component';
 import { PopupNotifComponent } from './popup-notif/popup-notif.component';
+import { TaskListComponent } from './home-components/task-list/task-list.component';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PopupNotifComponent } from './popup-notif/popup-notif.component';
     SettingsLayoutComponent,
     JournalLayoutComponent,
     PlannerLayoutComponent,
-    PopupNotifComponent
+    PopupNotifComponent,
+    TaskListComponent
   ],
   imports: [
     BrowserModule,
