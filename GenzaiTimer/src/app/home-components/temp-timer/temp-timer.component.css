@@ -12,4 +12,9 @@ h5{
 
 .timeLbl{
     margin-top:3%;
+    color:white;
+}
+
+div{
+    background: rgb(133,192,133);
 }

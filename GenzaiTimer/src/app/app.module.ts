@@ -17,13 +17,10 @@ import { TaskListComponent } from './home-components/task-list/task-list.compone
     HomeLayoutComponent,
     SettingsLayoutComponent,
     JournalLayoutComponent,
-<<<<<<< HEAD
     PlannerLayoutComponent,
     TempTimerComponent,
-    TaskListComponent
-=======
+    TaskListComponent,
     PlannerLayoutComponent
->>>>>>> f705212d0279e91cdcf97c5213b972efe6dd4181
   ],
   imports: [
     BrowserModule,
