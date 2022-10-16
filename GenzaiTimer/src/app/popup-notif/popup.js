@@ -1,1 +1,3 @@
-const textContainer = document.querySelector(".popup-container")
+function myFunction(){
+    var popup = document.getElementById("myPopup");
+}
