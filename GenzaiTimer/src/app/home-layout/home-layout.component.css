@@ -1,14 +1,15 @@
 .sidebarFormat{
     width:100%;
     background-color: transparent;
+    margin-right: 1%;
 }
 .clockFormat{
-    width:100%;
+    width:90%;
     background-color: transparent;
 
 }
 .taskListFormat{
-    width:100%;
+    width:35%;
     background-color: transparent;
 
 }
