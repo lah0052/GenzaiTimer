@@ -1,15 +1,14 @@
-
-<app-side-navbar>Loading...</app-side-navbar>
-
-<app-task-list> Loading... </app-task-list>
-
-<app-temp-timer>Loading...</app-temp-timer>
-
-<app-notification>Loading...</app-notification>
-
-
-
-
-
-
-
+<div class = "d-flex flex-row">
+    <div class = "d-flex flex-column position-absolute top-0 start-0 nav-item sidebarFormat">
+        <app-side-navbar>Loading...</app-side-navbar>
+    </div>
+    <div class = "d-flex flex-column position-absolute top-50 start-50 translate-middle nav-item clockFormat">
+        <app-temp-timer>Loading...</app-temp-timer>
+    </div>
+    <div class = "d-flex flex-column position-absolute top-0 end-0 nav-item taskListFormat">
+        <app-task-list> Loading... </app-task-list>
+    </div>
+    <div class = "d-flex flex-column position-absolute bottom-0 end-0">
+    <app-notification>Loading...</app-notification>
+    </div>
+</div>
