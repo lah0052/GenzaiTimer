@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {TaskListService} from './task-list-service'
+import {TaskListService} from './task-list.service'
 import { TaskListModel } from './task-list-model.model';
 
 
@@ -25,5 +25,4 @@ export class TaskListComponent implements OnInit {
       }
     });
   }
-
 }
