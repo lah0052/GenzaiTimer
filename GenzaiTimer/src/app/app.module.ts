@@ -7,6 +7,8 @@ import { SettingsLayoutComponent } from './settings-layout/settings-layout.compo
 import { JournalLayoutComponent } from './journal-layout/journal-layout.component';
 import { PlannerLayoutComponent } from './planner-layout/planner-layout.component';
 import {SideNavbarComponent} from './home-components/side-navbar/side-navbar.component';
+import {HttpClientModule} from '@angular/common/http';
+
 
 import { TempTimerComponent } from './home-components/temp-timer/temp-timer.component';
 
@@ -30,7 +32,8 @@ import { CalenderComponent } from './planner-components/calender/calender.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

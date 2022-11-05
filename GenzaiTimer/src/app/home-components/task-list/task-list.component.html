@@ -2,10 +2,10 @@
     <p class = "list-title">Task List</p>
 </div>
 
-<ul class="list-group list-group-flush list-group-numbered list ms-auto ">
-    <li class="list-group-item nav-item taskFormat">An item</li>
-    <li class="list-group-item nav-item taskFormat">A second item</li>
-    <li class="list-group-item nav-item taskFormat">A third item</li>
-    <li class="list-group-item nav-item taskFormat">A fourth item</li>
-    <li class="list-group-item nav-item taskFormat">And a fifth one</li>
-  </ul>
+<ul class="list-group list-group-flush list-group-numbered list ms-auto">
+    <div *ngFor = "let x of tasks">
+        <div *ngIf = "x != null">
+            <li class = "list-group-item nav-item taskFormat">{{x.TaskName}}</li>
+        </div>
+    </div>
+</ul>
