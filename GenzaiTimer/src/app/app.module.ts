@@ -12,6 +12,7 @@ import { TempTimerComponent } from './home-components/temp-timer/temp-timer.comp
 
 import { TaskListComponent } from './home-components/task-list/task-list.component';
 import { NotificationComponent } from './home-components/notification/notification.component';
+import { CalenderComponent } from './planner-components/calender/calender.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NotificationComponent } from './home-components/notification/notificati
     TaskListComponent,
     PlannerLayoutComponent,
     SideNavbarComponent,
-    NotificationComponent
+    NotificationComponent,
+    CalenderComponent
   ],
   imports: [
     BrowserModule,
