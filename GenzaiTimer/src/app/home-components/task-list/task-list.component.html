@@ -1,1 +1,4 @@
-<li class = "list-group-item nav-item taskFormat">{{TaskName}}</li>
+<div *ngIf="TaskName != undefined">
+    <h5>Here</h5>
+    <li class = "list-group-item nav-item taskFormat">{{TaskName}}</li>
+</div>

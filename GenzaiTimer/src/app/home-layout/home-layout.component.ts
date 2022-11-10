@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskListModel } from '../home-components/task-list/task-list-model.model';
- import {TaskListService} from '../home-components/task-list/task-list.service';
-// import { TaskListModel } from './home-components/task-list/task-list-model.model';
+import {TaskListService} from '../home-components/task-list/task-list.service';
 
 @Component({
   selector: 'app-home-layout',

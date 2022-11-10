@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-side-navbar',
+  selector: 'app-calender',
   templateUrl: './calender.component.html',
   styleUrls: ['./calender.component.css']
 })
