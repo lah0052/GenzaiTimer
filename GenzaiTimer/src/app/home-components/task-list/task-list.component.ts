@@ -11,18 +11,13 @@ import { TaskListModel } from './task-list-model.model';
 })
 export class TaskListComponent implements OnInit {
   @Input() TaskName: string;
-  tasks: TaskListModel[] = []
+  
 
-  constructor(private TaskListService: TaskListService) {
+  constructor() {
     this.TaskName = "No Task"
    }
 
   ngOnInit(): void {
-    this.TaskListService.getTaskList().subscribe((data: TaskListModel[]) => {
-      for(var x of data){
-        this.tasks.push(x)
-        console.log(x)
-      }
-    });
+    
   }
 }

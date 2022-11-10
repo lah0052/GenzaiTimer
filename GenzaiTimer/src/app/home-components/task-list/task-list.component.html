@@ -1,11 +1,1 @@
-<div class="d-flex list ms-auto">
-    <p class = "list-title">Task List</p>
-</div>
-
-<ul class="list-group list-group-flush list-group-numbered list ms-auto">
-    <div *ngFor = "let x of tasks">
-        <div *ngIf = "x != null">
-            <li class = "list-group-item nav-item taskFormat">{{x.TaskName}}</li>
-        </div>
-    </div>
-</ul>
+<li class = "list-group-item nav-item taskFormat">{{TaskName}}</li>
