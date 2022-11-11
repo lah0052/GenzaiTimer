@@ -8,7 +8,7 @@ import {TaskListService} from '../home-components/task-list/task-list.service';
   styleUrls: ['./home-layout.component.css']
 })
 export class HomeLayoutComponent implements OnInit {
-  tasks: TaskListModel[] = []
+  tasks: TaskListModel[] = [];
 
   constructor(private TaskListService: TaskListService){
 
@@ -16,9 +16,9 @@ export class HomeLayoutComponent implements OnInit {
 
   ngOnInit(): void {
     this.TaskListService.getTaskList().subscribe((data: TaskListModel[]) => {
-      for(var x of data){
-        this.tasks.push(x)
-        console.log(x)
+      for(var task of data){
+        console.log(task);
+        this.tasks.push(task);
       }
     });
   }

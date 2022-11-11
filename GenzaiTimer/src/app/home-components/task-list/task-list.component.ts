@@ -6,11 +6,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent implements OnInit {
-  @Input() TaskName: string;
+  @Input() name: string;
   
 
   constructor() {
-    this.TaskName = "No Task"
+    this.name = "No Task"
    }
 
   ngOnInit(): void {
