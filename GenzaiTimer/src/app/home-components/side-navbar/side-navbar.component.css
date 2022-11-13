@@ -8,11 +8,16 @@
     background-color:black;
     margin-left: 0.6vw;
     margin-bottom: 7vh;
+    
 }
+
 .buttonFormat{
     border-width: .1vw;
     border-radius: 48%;
-    
+    color: white;
+    background-color:black;
+    margin-left: 0.6vw;
+    margin-bottom: 7vh;
 }
 .buttonFormat:active{
     background-color:white;
@@ -23,7 +28,4 @@
     background-color:white;
     color: black;
     border-color: transparent;
-}
-.buttonFormat{
-    
 }
