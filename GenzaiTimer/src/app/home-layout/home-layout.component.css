@@ -22,3 +22,16 @@
 .list{
     width: 25vw;
 }
+
+.addIcon{
+    font-size: 25pt;
+    color: rgb(72, 72, 72);
+    background-color: rgb(133, 192, 133);
+    border-radius: 50px;
+    margin-bottom: 5%;
+    padding-left: 0.5vw;
+    padding-bottom: 5vh;
+    margin-right: 1vw;
+    width: 3.5vw;
+    height: 6vh;
+}
