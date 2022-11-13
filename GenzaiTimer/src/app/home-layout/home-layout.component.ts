@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TaskListModel } from '../home-components/task-list/task-list-model.model';
+import {TaskListService} from '../home-components/task-list/task-list.service';
 
 @Component({
   selector: 'app-home-layout',
@@ -6,7 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-layout.component.css']
 })
 export class HomeLayoutComponent implements OnInit {
+  tasks: TaskListModel[] = [];
+
+  constructor(private TaskListService: TaskListService){
+
+  }
+
   ngOnInit(): void {
+    this.TaskListService.getTaskList().subscribe((data: TaskListModel[]) => {
+      for(var task of data){
+        console.log(task);
+        this.tasks.push(task);
+      }
+    });
   }
 
 }

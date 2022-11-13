@@ -1,7 +1,7 @@
 export class TaskListModel{
-    TaskName: string;
+    name: string;
 
     constructor(TaskName: string){
-        this.TaskName = TaskName;
+        this.name = TaskName;
     }
 }
