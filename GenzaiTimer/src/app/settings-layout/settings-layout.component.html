@@ -4,26 +4,26 @@
         <div class="col-12 col-lg-10 col-xl-8 mx-auto">
             <h2 class="h3 mb-4 page-title">Settings</h2>
             <div class="my-4">
-                <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+                <!-- <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Notifications</a>
+                        <a class="nav-link active" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Timer</a>
                     </li>
-                </ul>
-                <h5 class="mb-0 mt-5">Notifications Settings</h5>
-                <p>Select notification you want to receive</p>
+                </ul> -->
+                <h5 class="mb-0 mt-5">Timer Settings</h5>
+                <!-- <p>Select notification you want to receive</p> -->
                 <hr class="my-4" />
-                <strong class="mb-0">Security</strong>
-                <p>Control security alert you will be notified.</p>
+                <strong class="mb-0">Duration</strong>
+                <p>Modify the amount of time you want to spend working/taking a break.</p>
                 <div class="list-group mb-5 shadow">
                     <div class="list-group-item">
                         <div class="row align-items-center">
                             <div class="col">
-                                <strong class="mb-0">Unusual activity notifications</strong>
-                                <p class="text-muted mb-0">Donec in quam sed urna bibendum tincidunt quis mollis mauris.</p>
+                                <strong class="mb-0">Work</strong>
+                                <p class="text-muted mb-0">Amount of time (in minutes) you'd like to spend on your work period.</p>
                             </div>
                             <div class="col-auto">
                                 <div class="custom-control custom-switch">
-                                    <input type="checkbox" class="custom-control-input" id="alert1" checked="" />
+                                    <input type="text" class="custom-control-input" id="alert2" value="25" size="2" style="text-align:right;"/>
                                     <span class="custom-control-label"></span>
                                 </div>
                             </div>
@@ -32,12 +32,26 @@
                     <div class="list-group-item">
                         <div class="row align-items-center">
                             <div class="col">
-                                <strong class="mb-0">Unauthorized financial activity</strong>
-                                <p class="text-muted mb-0">Fusce lacinia elementum eros, sed vulputate urna eleifend nec.</p>
+                                <strong class="mb-0">Short Break</strong>
+                                <p class="text-muted mb-0">Amount of time (in minutes) you'd like to spend on your Short Break.</p>
                             </div>
                             <div class="col-auto">
                                 <div class="custom-control custom-switch">
-                                    <input type="checkbox" class="custom-control-input" id="alert2" />
+                                    <input type="text" class="custom-control-input" id="alert2" value="5" size="2" style="text-align:right;"/>
+                                    <span class="custom-control-label"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <strong class="mb-0">Long Break</strong>
+                                <p class="text-muted mb-0">Amount of time (in minutes) you'd like to spend on your Long Break.</p>
+                            </div>
+                            <div class="col-auto">
+                                <div class="custom-control custom-switch">
+                                    <input type="text" class="custom-control-input" id="alert2" value="15" size="2" style="text-align:right;"/>
                                     <span class="custom-control-label"></span>
                                 </div>
                             </div>
@@ -45,24 +59,24 @@
                     </div>
                 </div>
                 <hr class="my-4" />
-                <strong class="mb-0">System</strong>
-                <p>Please enable system alert you will get.</p>
+                <strong class="mb-0">Patern</strong>
+                <p>Modify the amount of short breaks you'd like to take before taking a long break.</p>
                 <div class="list-group mb-5 shadow">
                     <div class="list-group-item">
                         <div class="row align-items-center">
                             <div class="col">
-                                <strong class="mb-0">Notify me about new features and updates</strong>
-                                <p class="text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <strong class="mb-0">Interval</strong>
+                                <p class="text-muted mb-0">Number of short breaks before a long break.</p>
                             </div>
                             <div class="col-auto">
                                 <div class="custom-control custom-switch">
-                                    <input type="checkbox" class="custom-control-input" id="alert3" checked="" />
+                                    <input type="text" class="custom-control-input" id="alert2" value="4" size="2" style="text-align:right;"/>
                                     <span class="custom-control-label"></span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="list-group-item">
+                    <!-- <div class="list-group-item">
                         <div class="row align-items-center">
                             <div class="col">
                                 <strong class="mb-0">Notify me by email for latest news</strong>
@@ -89,7 +103,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
