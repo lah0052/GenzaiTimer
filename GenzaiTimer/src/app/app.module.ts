@@ -8,10 +8,8 @@ import { JournalLayoutComponent } from './journal-layout/journal-layout.componen
 import { PlannerLayoutComponent } from './planner-layout/planner-layout.component';
 import {SideNavbarComponent} from './home-components/side-navbar/side-navbar.component';
 import {HttpClientModule} from '@angular/common/http';
-
-
+import { NgForm } from '@angular/forms';
 import { TempTimerComponent } from './home-components/temp-timer/temp-timer.component';
-
 import { TaskListComponent } from './home-components/task-list/task-list.component';
 import { NotificationComponent } from './home-components/notification/notification.component';
 import { CalenderComponent } from './planner-components/calender/calender.component';
@@ -21,12 +19,10 @@ import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AddTaskComponent } from './home-components/task-list/add-task/add-task.component';
-
-import { initializeApp,provideFirebaseApp } from '@angular/fire/database';
-import { provideAuth,getAuth} from '../environments/environment'
-import {provideDatabase,getDatabase } from '@angular/fire/firestore';
-import { provideFirestore, getFirestore } from '@angular/fire/firestore';
-
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,12 +43,11 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
-
-    provideDatabase(()=> getDatabase()),
-    provideFirebaseApp(()=> initializeApp(environment.firebase))
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideDatabase(() => getDatabase()),
+    provideFirestore(() => getFirestore()),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
