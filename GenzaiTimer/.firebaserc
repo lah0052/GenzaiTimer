@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "genzaitimer-debfe": {
+      "hosting": {
+        "GenzaiTimer": [
+          "genzaitimer-debfe"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "genzaitimer-debfe"
+  }
+}

@@ -16,7 +16,11 @@ import { TaskListComponent } from './home-components/task-list/task-list.compone
 import { NotificationComponent } from './home-components/notification/notification.component';
 import { CalenderComponent } from './planner-components/calender/calender.component';
 import { LoginLayoutComponent } from './login-layout/login-layout.component';
-
+import { FormsModule } from '@angular/forms';
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AddTaskComponent } from './home-components/task-list/add-task/add-task.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,14 +34,13 @@ import { LoginLayoutComponent } from './login-layout/login-layout.component';
     SideNavbarComponent,
     NotificationComponent,
     CalenderComponent,
-    LoginLayoutComponent
+    LoginLayoutComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    
-
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
