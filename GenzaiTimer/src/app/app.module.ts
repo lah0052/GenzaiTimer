@@ -35,7 +35,9 @@ import { LoginLayoutComponent } from './login-layout/login-layout.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
