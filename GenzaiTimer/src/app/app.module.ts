@@ -47,6 +47,9 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
+    FormsModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebase,'GenzaiTimer'),
     
   ],
   providers: [],
