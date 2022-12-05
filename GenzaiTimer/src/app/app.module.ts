@@ -16,6 +16,18 @@ import { TaskListComponent } from './home-components/task-list/task-list.compone
 import { NotificationComponent } from './home-components/notification/notification.component';
 import { CalenderComponent } from './planner-components/calender/calender.component';
 import { LoginLayoutComponent } from './login-layout/login-layout.component';
+import { AddTaskComponent } from './home-components/task-list/add-task/add-task.component';
+import { FormsModule } from '@angular/forms';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+
+import {AngularFireModule} from '@angular/fire/compat'
+import {AngularFirestoreModule} from '@angular/fire/compat/firestore/'
+
+
 
 @NgModule({
   declarations: [
@@ -30,12 +42,22 @@ import { LoginLayoutComponent } from './login-layout/login-layout.component';
     SideNavbarComponent,
     NotificationComponent,
     CalenderComponent,
-    LoginLayoutComponent
+    LoginLayoutComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebase, 'GenzaiTimer'),
+
+    // provideFirebaseApp(() => initializeApp(environment.firebase)),
+    // provideAuth(() => getAuth()),
+    provideDatabase(() => getDatabase()),
+    provideFirebaseApp(() => initializeApp(environment.firebase))
+    // provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]
