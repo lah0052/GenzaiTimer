@@ -15,6 +15,7 @@ export class HomeLayoutComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // this.mockService.getMock().subscribe((data: CardModel[]
     this.TaskListService.getTaskList().subscribe((data: TaskListModel[]) => {
       for(var task of data){
         console.log(task);

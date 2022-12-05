@@ -1,0 +1,13 @@
+<div class="container" style="padding-left: 5vw;">
+    <form #taskForm="ngForm" (ngSubmit)="addTask(taskForm.value)">
+
+        <div class="input-group">
+            <input type="text" class="form-control" ngModel name="name">
+        </div>
+
+        <button class="btn btn-dark" type="submit">
+            Add Task
+        </button>
+
+    </form>
+</div>

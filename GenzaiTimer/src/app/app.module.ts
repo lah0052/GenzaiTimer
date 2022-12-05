@@ -33,7 +33,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     SideNavbarComponent,
     NotificationComponent,
     CalenderComponent,
-    LoginLayoutComponent
+    LoginLayoutComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,
