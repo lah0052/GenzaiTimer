@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AddTaskComponent } from './home-components/task-list/add-task/add-task.component';
 @NgModule({
   declarations: [
     AppComponent,
