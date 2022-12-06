@@ -1,10 +1,10 @@
 <div *ngFor = "let calender of calenders">
     <app-calender
-        date = {{calender.date}};
-        title = {{calender.title}};
-        description = {{calender.description}};
-        time = {{calender.time}};
+        date = {{calender.date}}
+        title = {{calender.title}}
+        description = {{calender.description}}
+        time = {{calender.time}}
     ></app-calender>
 </div>
 <a routerLink = "/event" routerLinkActive = "active">
-<button class = "btn btn-dark"> add event</button></a>
+<button class = "btn btn-dark nav-item eventFormat"> add event</button></a>
