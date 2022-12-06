@@ -20,6 +20,12 @@ import { FormsModule } from '@angular/forms';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AddTaskComponent } from './home-components/task-list/add-task/add-task.component';
+import { initializeApp,provideFirebaseApp } from 'firebase/app';
+import {provideApp,getAuth } from '@angular/fire/auth';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { provideFirestore,getFireStore } from '@angular/fire/firestore'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +48,11 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     HttpClientModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    provideFirebaseApp(() =>initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideDatabase(() => getDatabase()),
+    provideFirestore(() => getFireStore())
   ],
   providers: [],
   bootstrap: [AppComponent]
