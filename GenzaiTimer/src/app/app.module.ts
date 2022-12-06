@@ -25,6 +25,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { AddEventComponent } from './planner-components/event/add-event/add-event.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,8 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     NotificationComponent,
     CalenderComponent,
     LoginLayoutComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    AddEventComponent
   ],
   imports: [
     BrowserModule,
@@ -52,11 +54,6 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     FormsModule,
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase,'GenzaiTimer'),
-    ,
-    provideFirebaseApp(() =>initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    provideDatabase(() => getDatabase()),
-    provideFirestore(() => getFireStore())
   ],
   providers: [],
   bootstrap: [AppComponent]

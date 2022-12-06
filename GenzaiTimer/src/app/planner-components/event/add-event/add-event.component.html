@@ -1,7 +1,7 @@
 <div class = "container">
     <div class = "row">
         <div class = "col-8">
-            <form #postForm = "ngForm" (ngSubmit)= "addVideo(postForm.value)">
+            <form #postForm = "ngForm" (ngSubmit)= "addCalender(postForm.value)">
                 
                 <div class = "input-group">
                     <span class = "input-group-text">Date of event</span>
@@ -24,9 +24,10 @@
                 </div>
 
                 <button class = "btn btn-dark" type= "submit" [disabled] = "!postForm.valid">
-
+                        submit event
                 </button>
             </form>
         </div>
     </div>
 </div>
+
