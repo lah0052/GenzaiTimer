@@ -10,8 +10,7 @@
 }
 .taskListFormat{
     width:35%;
-    background-color: transparent;
-
+    background-color: transparent
 }
 
 .list-title{
@@ -34,4 +33,9 @@
     margin-right: 1vw;
     width: 3.5vw;
     height: 6vh;
+}
+.btncolor{
+    background-color: rgb(133, 192, 133);
+    color: white;
+    box-shadow: 0 0 15px rgb(216, 216, 216);
 }
