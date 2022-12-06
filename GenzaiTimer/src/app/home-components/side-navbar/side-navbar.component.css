@@ -2,10 +2,11 @@
     height: 100vh;
     width: 4vw;
     background-color: rgb(133, 192, 133);
+  top: 0;
 }
 .iconFormat{
     color: white;
-    background-color:black;
+    background-color:rgb(72, 72, 72);
     margin-left: 0.6vw;
     margin-bottom: 7vh;
     
@@ -15,17 +16,17 @@
     border-width: .1vw;
     border-radius: 50px;
     color: white;
-    background-color:black;
+    background-color:rgb(72, 72, 72);
     margin-left: 0.6vw;
     margin-bottom: 7vh;
 }
 .buttonFormat:active{
     background-color:white;
     border-color: transparent;
-    color: black;
+    color: rgb(72, 72, 72);
 }
 .buttonFormat:hover{
     background-color:white;
-    color: black;
+    color: rgb(72, 72, 72);
     border-color: transparent;
 }
