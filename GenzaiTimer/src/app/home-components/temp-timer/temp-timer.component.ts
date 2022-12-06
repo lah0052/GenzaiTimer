@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {interval, Observable} from "rxjs";
+import {interval, Observable, TimeoutError} from "rxjs";
 import {map, shareReplay} from "rxjs/operators";  
 
 @Component({
@@ -12,8 +12,9 @@ import {map, shareReplay} from "rxjs/operators";
 export class TempTimerComponent {
 
   constructor() { 
+    let current_time = Date.now()
     this.timeLeft$ = interval(1000).pipe(
-      map(x => calcDateDiff()),
+      map(x => calcDateDiff(current_time)),
         shareReplay(1)
     );
   }
@@ -21,17 +22,18 @@ export class TempTimerComponent {
   public timeLeft$: Observable<timeComponents>;
 }
 
-function calcDateDiff(endDay: Date = new Date(2022, 20, 1)): 
+function calcDateDiff(time: number): 
 timeComponents {
 
-  const dDay = endDay.valueOf();
-
+  let now = new Date()
   const milliSecondsInASecond = 1000;
   const hoursInADay = 24;
   const minutesInAnHour = 60;
   const secondsInAMinute = 60;
 
-  const timeDifference = dDay - Date.now();
+  let timeDifference =  time - Date.now()+1000*60*30
+  if(timeDifference < 0)
+    timeDifference = 0 
 
   const daysToDday = Math.floor(
     timeDifference /
