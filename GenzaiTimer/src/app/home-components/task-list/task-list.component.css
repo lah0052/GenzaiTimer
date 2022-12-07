@@ -4,8 +4,10 @@
 .list-title{
     color: rgb(72, 72, 72);
     font-size:20pt;
+    font-family: 'Space Mono', monospace;
 }
 .taskFormat{
+    font-family: 'Space Mono', monospace;
     color: rgb(72, 72, 72);
     background-color: rgb(133, 192, 133);
     border-radius: 10px;
