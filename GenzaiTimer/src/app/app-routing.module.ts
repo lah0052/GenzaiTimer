@@ -5,6 +5,9 @@ import { HomeLayoutComponent } from './home-layout/home-layout.component';
 import { JournalLayoutComponent } from './journal-layout/journal-layout.component';
 import { PlannerLayoutComponent } from './planner-layout/planner-layout.component';
 import { SettingsLayoutComponent } from './settings-layout/settings-layout.component';
+import { AddEventComponent } from './planner-components/event/add-event/add-event.component';
+
+
 
 
 const routes: Routes = [
@@ -13,7 +16,9 @@ const routes: Routes = [
   {path: "planner", component: PlannerLayoutComponent},
   {path: "journal", component: JournalLayoutComponent},
   {path: "settings", component: SettingsLayoutComponent},
-  {path: "test", component: AddTaskComponent}
+  {path: "test", component: AddTaskComponent},
+  {path: "event", component: AddEventComponent}
+
 ];
 
 @NgModule({

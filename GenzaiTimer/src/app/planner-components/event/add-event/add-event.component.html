@@ -1,0 +1,33 @@
+<div class = "container">
+    <div class = "row">
+        <div class = "col-8">
+            <form #postForm = "ngForm" (ngSubmit)= "addCalender(postForm.value)">
+                
+                <div class = "input-group">
+                    <span class = "input-group-text">Date of event</span>
+                    <input type = "text" class = "form-control" ngModel name = "date">
+                </div>
+
+                <div class = "input-group">
+                    <span class = "input-group-text">Title of event</span>
+                    <input type = "text" class = "form-control" ngModel name = "title">
+                </div>
+
+                <div class = "input-group">
+                    <span class = "input-group-text">Description of event</span>
+                    <input type = "text" class = "form-control" ngModel name = "description">
+                </div>
+
+                <div class = "input-group">
+                    <span class = "input-group-text">Time of event</span>
+                    <input type = "text" class = "form-control" ngModel name = "time">
+                </div>
+
+                <button class = "btn btn-dark" type= "submit" [disabled] = "!postForm.valid">
+                        submit event
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
