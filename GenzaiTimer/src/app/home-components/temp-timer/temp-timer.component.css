@@ -1,35 +1,10 @@
-.width{
-    width: 30%;
+.timer {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 1.4em;
+  letter-spacing: -1px;
 }
-
-h5{
-    font-size:400%;
-}
-.topBtnsSpacing{
-    justify-content: space-between;
-    margin-left: 17%;
-    margin-right: 10%;
-}
-.topBtns{
-    background-color: rgb(72, 72, 72);;
-    color: white;
-    border-radius: 20px;
-    
-}
-.startBtn{
-    color: white;
-    margin:5%;
-    background-color: rgb(72, 72, 72);
-    border-color: rgb(72, 72, 72);
-    border-radius: 20px;
-}
-
-.timeLbl{
-    
-    margin-top:3%;
-    color:white;
-}
-
-div{
-    background: rgb(133,192,133);
+.timer span {
+  font-size: 2em;
+  margin: 0 3px 0 15px;
 }
