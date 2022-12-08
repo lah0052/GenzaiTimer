@@ -4,6 +4,7 @@ body{
 
 button{
     background-color: rgb(133, 192, 133);
-    width: 10%;
+    width: 20%;
     color: white;
+    margin-left: 80%;
 }
