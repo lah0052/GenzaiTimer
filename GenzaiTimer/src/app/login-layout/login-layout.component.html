@@ -171,7 +171,8 @@
           <input type="password" class="form-control" placeholder="Enter Password" name="password" required password>
 
        
-          <button type="submit">Login</button>
+          <button type="submit" [disabled]="!loginForm.valid" (click)="buttonClicked='Login'">Login</button>
+          <button type="submit" (click)="buttonClicked='SignUp'">Sign up</button>
       
           <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
