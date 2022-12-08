@@ -26,6 +26,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AddEventComponent } from './planner-components/event/add-event/add-event.component';
+import { AuthComponent } from './auth/auth.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { AddEventComponent } from './planner-components/event/add-event/add-even
     CalenderComponent,
     LoginLayoutComponent,
     AddTaskComponent,
-    AddEventComponent
+    AddEventComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
