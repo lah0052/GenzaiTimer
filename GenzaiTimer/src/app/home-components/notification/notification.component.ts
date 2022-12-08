@@ -46,7 +46,7 @@ export class NotificationComponent implements OnInit {
     this.sendQuote()
     setInterval(() => {
       this.sendQuote() 
-    }, 10000);
+    }, 300000);
   }
 
   async sendQuote() {
@@ -57,7 +57,7 @@ export class NotificationComponent implements OnInit {
     }
     this.quote = tempQuote
     this.show = true
-    await sleep(5000)
+    await sleep(10000)
     this.show = false
   }
 }
