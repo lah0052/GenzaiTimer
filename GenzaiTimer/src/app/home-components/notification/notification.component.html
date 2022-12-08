@@ -1,13 +1,5 @@
 
-<body>
-    <button>Give me motivation</button>
-    <div class="alert hide"> 
-        <span class="msg"> Keep going!</span>
+    <div id="dialog" [ngClass]="{'alert-hide': !show, 'alert-show': show}"> 
+        <span class="msg"> {{quote}} </span>
     </div>
-    <script>
-        $('button').click(function(){
-            $('.alert').removeClass("hide");
-        });
-    </script>
-</body>
 
