@@ -1,0 +1,13 @@
+.login{
+    color:#A8AFBB;
+    font-size: 83%;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.gradient{
+    background: linear-gradient(black, transparent);
+    
+}
+.buttonBG {
+    background: transparent;
+}
