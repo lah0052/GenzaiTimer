@@ -10,19 +10,19 @@
                 <!-- <p>Select notification you want to receive</p> -->
                 
                 <hr class="my-4" />
-                <strong class="mb-0">Security</strong>
-                <p>Control security alert you will be notified.</p>
+                <strong class="mb-0">Duration</strong>
+                <p>Control the duration of work time and break time.</p>
                 <div class="list-group mb-5 shadow">
                     <div class="list-group-item">
                         <div class="row align-items-center">
                             <div class="col">
-                                <strong class="mb-0">Unusual activity notifications</strong>
-                                <p class="text-muted mb-0">Donec in quam sed urna bibendum tincidunt quis mollis mauris.</p>
+                                <strong class="mb-0">Work</strong>
+                                <p class="text-muted mb-0">Amount of time (in minutes) you'd like to spend on your work.</p>
                             </div>
                             <div class="col-auto">
                                 <div class="custom-control custom-switch">
-                                    <input type="number" class="form-control" ngModel name="work" id="alert2" value="25" size="2" style="text-align:right;"/>
-                                    <span class="input-group-text">work</span>
+                                    <input type="text" text="25" class="form-control" ngModel name="work" id="alert2" value="25" size="2" style="text-align:right;"/>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -30,13 +30,13 @@
                     <div class="list-group-item">
                         <div class="row align-items-center">
                             <div class="col">
-                                <strong class="mb-0">Unauthorized financial activity</strong>
-                                <p class="text-muted mb-0">Fusce lacinia elementum eros, sed vulputate urna eleifend nec.</p>
+                                <strong class="mb-0">Short Break</strong>
+                                <p class="text-muted mb-0">Amount of time (in minutes) you'd like to spend on your short break.</p>
                             </div>
                             <div class="col-auto">
                                 <div class="custom-control custom-switch">
-                                    <input type="number" class="form-control" ngModel name="shortBreak" id="alert2" value="5" size="2" style="text-align:right;"/>
-                                    <span class="input-group-text">shortBreak</span>
+                                    <input type="text" text="25" class="form-control" ngModel name="shortBreak" id="alert2" value="5" size="2" style="text-align:right;"/>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -45,31 +45,31 @@
                         <div class="row align-items-center">
                             <div class="col">
                                 <strong class="mb-0">Long Break</strong>
-                                <p class="text-muted mb-0">Amount of time (in minutes) you'd like to spend on your Long Break.</p>
+                                <p class="text-muted mb-0">Amount of time (in minutes) you'd like to spend on your long Break.</p>
                             </div>
                             <div class="col-auto">
                                 <div class="custom-control custom-switch">
-                                    <input type="number" class="form-control" ngModel name="longBreak" id="alert2" value="15" size="2" style="text-align:right;"/>
-                                    <span class="input-group-text">longBreak</span>
+                                    <input type="text" text="25" class="form-control" ngModel name="longBreak" id="alert2" value="15" size="2" style="text-align:right;"/>
+                                    
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <hr class="my-4" />
-                <strong class="mb-0">System</strong>
-                <p>Please enable system alert you will get.</p>
+                <strong class="mb-0">Interval</strong>
+                <p>Control when you'd like to take a longer break.</p>
                 <div class="list-group mb-5 shadow">
                     <div class="list-group-item">
                         <div class="row align-items-center">
                             <div class="col">
-                                <strong class="mb-0">Notify me about new features and updates</strong>
-                                <p class="text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <strong class="mb-0">Long Break Interval</strong>
+                                <p class="text-muted mb-0">Amount of short breaks you'd like to take before taking a longer break.</p>
                             </div>
                             <div class="col-auto">
                                 <div class="custom-control custom-switch">
-                                    <input type="number" class="form-control" ngModel name="interval" id="alert2" value="4" size="2" style="text-align:right;"/>
-                                    <span class="input-group-text"></span>
+                                    <input type="text" text="25" class="form-control" ngModel name="interval" id="alert2" value="4" size="2" style="text-align:right;"/>
+                                    
                                 </div>
                             </div>
                         </div>
