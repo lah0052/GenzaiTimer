@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CalenderCardModel } from '../../calender-card.model';
 import { CalenderService } from '../../calender.service';
 
@@ -9,12 +10,13 @@ import { CalenderService } from '../../calender.service';
 })
 export class AddEventComponent implements OnInit {
 
-  constructor(private ps:CalenderService) { }
+  constructor(private ps:CalenderService, private router:Router) { }
 
   ngOnInit(): void {
   }
 
   addCalender(calender:CalenderCardModel){
     this.ps.addCalender(calender);
+    this.router.navigate(['/planner']);
   }
 }

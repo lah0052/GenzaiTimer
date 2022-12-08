@@ -1,22 +1,9 @@
-
-<div class="card text-center mx-auto width">
-  <div class="card-header text-center">
-    <ul class="nav nav-pills card-header-pills nav-item topBtnsSpacing">
-      <li class="">
-        <a class="nav-link nav-item topBtns" href="#">Work</a>
-      </li>
-      <li class="">
-        <a class="nav-link nav-item topBtns" href="#">Short Break</a>
-      </li>
-      <li class="">
-        <a class="nav-link nav-item topBtns" href="#">Long Break</a>
-      </li>
-    </ul>
-  </div>
-  <div class="card-body">
-    <h5 class="card-title timeLbl">25:00</h5>
-    <a href="#" class="btn btn-primary startBtn">Start/Stop</a>
-  </div>
+<div class="timer" *ngIf="(timeLeft$ | async) as t; else sorry">
+	<h4> Count down timer </h4>
+	<span id="minutes"> {{t.minutesToDday}} </span>Min
+	<span id="seconds"> {{t.secondsToDday}} </span>S
 </div>
 
-
+<ng-template #sorry>
+	Sorry, something went wrong...
+</ng-template>
