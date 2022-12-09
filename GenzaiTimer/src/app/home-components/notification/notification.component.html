@@ -1,3 +1,5 @@
-<div class="Container2">
-    Keep Studying!
-</div>
+
+    <div id="dialog" [ngClass]="{'alert-hide': !show, 'alert-show': show}"> 
+        <span class="msg"> {{quote}} </span>
+    </div>
+

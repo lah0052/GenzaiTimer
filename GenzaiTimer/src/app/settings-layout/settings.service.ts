@@ -19,6 +19,7 @@ export class SettingsService{
 
     changeSettings(settings: SettingsModel)
     {
-        this.db.list<SettingsModel>("settings").push(settings);
+        this.db.database.ref("users/" + "0" + "/settings").set(settings);
+       
     }
 }

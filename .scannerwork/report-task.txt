@@ -1,0 +1,6 @@
+projectKey=genzai
+serverUrl=http://localhost:9000
+serverVersion=8.8.0.42792
+dashboardUrl=http://localhost:9000/dashboard?id=genzai
+ceTaskId=AYTzc-8CfCQE9HTuSblA
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYTzc-8CfCQE9HTuSblA
