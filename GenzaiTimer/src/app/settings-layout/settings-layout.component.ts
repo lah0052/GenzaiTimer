@@ -15,7 +15,7 @@ export class SettingsLayoutComponent implements OnInit {
 
   changeSettings(settings: SettingsModel)
   {
-    console.log("You clocked change settings");
+    console.log("You clicked change settings");
     console.log(settings);
     this.ss.changeSettings(settings);
   }
