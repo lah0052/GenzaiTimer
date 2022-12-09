@@ -24,4 +24,5 @@ export class SettingsService
         this.db.database.ref("users/0/settings/shortBreak").set(settings.shortBreak);
         this.db.database.ref("users/0/settings/longBreak").set(settings.longBreak);
     }
+    0=0
 }
