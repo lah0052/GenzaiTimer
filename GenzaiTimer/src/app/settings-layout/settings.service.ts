@@ -6,8 +6,8 @@ import { AngularFireDatabase } from '@angular/fire/compat/database'
     {providedIn: 'root'}
 )
 
-export class SettingsService{
-
+export class SettingsService
+{
     constructor(private db: AngularFireDatabase) {
 
     }
