@@ -18,6 +18,10 @@ export class TaskListService{
     }
 
     addTasks(task: TaskListModel){
+        if(task.name.length == 0){
+            return;
+        }
+        
         this.db.list<TaskListModel>("users/" + this.user + "/TaskList").push(task);
     }
 }
