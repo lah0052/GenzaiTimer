@@ -23,5 +23,6 @@ export class TaskListService{
         }
         
         this.db.list<TaskListModel>("users/" + this.user + "/TaskList").push(task);
+        location.reload();
     }
 }
