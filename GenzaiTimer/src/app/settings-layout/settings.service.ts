@@ -6,8 +6,8 @@ import { AngularFireDatabase } from '@angular/fire/compat/database'
     {providedIn: 'root'}
 )
 
-export class SettingsService{
-
+export class SettingsService
+{
     constructor(private db: AngularFireDatabase) {
 
     }
@@ -19,7 +19,9 @@ export class SettingsService{
 
     changeSettings(settings: SettingsModel)
     {
-        this.db.database.ref("users/" + "0" + "/settings").set(settings);
-       
+        this.db.database.ref("users/" + "0" + "/settings/work").set(settings.work);
+        this.db.database.ref("users/" + "0" + "/settings/interval").set(settings.interval);
+        this.db.database.ref("users/" + "0" + "/settings/shortBreak").set(settings.shortBreak);
+        this.db.database.ref("users/" + "0" + "/settings/longBreak").set(settings.longBreak);
     }
 }

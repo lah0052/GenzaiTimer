@@ -1,28 +1,20 @@
-<div class="d-flex container">
-    <script src="/auth.component.js"></script>
-    <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
-        <div class="input-group mb-3">
-            <span class="input-group-text">Email</span>
-            <input type="text" class="form-contol" placeholder="Email" ngModel name="email" required email>
-        </div>
+<form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+    <div class="input-group mb-3 absolute">
+        <span class="input-group-text">Email</span>
+        <input type="text" class="form-contol" placeholder="Email" ngModel name="email" required email>
+    </div>
 
-        <div class="input-group mb-3">
-            <span class="input-group-text">Password</span>
-            <input type="password" class="form-contol" placeholder="Password" ngModel name="password" required password>
-        </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text">Password</span>
+        <input type="password" class="form-contol" placeholder="Password" ngModel name="password" required password>
+    </div>
 
-       <a>
-        <button class="btn btn-dark m-1" type="submit" [disabled]="!authForm.valid" (click)="buttonClicked='Login'">
-            Login
-        </button>
-       </a>
+    <button class="btn btn-dark m-1" type="submit" [disabled]="!authForm.valid" (click)="buttonClicked='Login'">
+        Login
+    </button>
 
 
-        <a>
-            <button class="btn btn-dark m-1" type="submit" (click)="buttonClicked='SignUp'">
-                Signup
-            </button>
-        </a>
-
-    </form>
-</div>
+    <button class="btn btn-dark m-1" type="submit" (click)="buttonClicked='SignUp'">
+        Signup
+    </button>
+</form>

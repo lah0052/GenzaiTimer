@@ -7,19 +7,20 @@ import {AngularFireDatabase} from '@angular/fire/compat/database';
 )
 export class CalenderService{
      private baseUrl: string = "https://genzaitimer-debfe-default-rtdb.firebaseio.com/"
-     private calenderEndPoint = "CalendarCard.json";
+     private calenderEndPoint = "eventEntries.json";
 
      constructor( private db: AngularFireDatabase){
 
      }
 
      getCalenders(){
-        return this.db.list<CalenderCardModel>("CalendarCard").valueChanges();
+        return this.db.list<CalenderCardModel>("users/"+"0"+"/eventEntries").valueChanges();
      }
      getCalender(index:number){
-        return this.db.list<CalenderCardModel>(this.baseUrl + this.calenderEndPoint + 'CalendarCard' + '/' + index + '.json');
+        return this.db.list<CalenderCardModel>(this.baseUrl + this.calenderEndPoint + 'eventEntries' + '/' + index + '.json');
      }
      addCalender(calender: CalenderCardModel){
-        this.db.list<CalenderCardModel>("CalendarCard").push(calender);
+        this.db.list<CalenderCardModel>("users/"+"0"+"/eventEntries").push(calender);
      }
+     
 } 

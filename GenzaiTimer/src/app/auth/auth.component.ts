@@ -1,5 +1,6 @@
 import { NgForOf } from "@angular/common";
 import { Component } from "@angular/core";
+import { AngularFireDatabase } from "@angular/fire/compat/database";
 import { NgForm } from "@angular/forms";
 import { Observable } from "rxjs";
 import { AuthService } from "./auth.service";
@@ -13,7 +14,7 @@ export class AuthComponent {
     public buttonClicked!:string;
     private authObservable!: Observable<AuthResponse>;
 
-    constructor(private authService:AuthService) {
+    constructor(private authService:AuthService, private db: AngularFireDatabase) {
 
     }
 
@@ -32,14 +33,27 @@ export class AuthComponent {
         this.authObservable.subscribe(
             (data:AuthResponse) => {
                 console.log(data);
+                if(this.buttonClicked == 'SignUp')
+                {
+                    this.db.database.ref("users").child(data.localId).set("");
+                    this.db.database.ref("users/"+data.localId).child("TaskList").set("");
+                    this.db.database.ref("users/"+data.localId).child("eventEntries").set("");
+                    this.db.database.ref("users/"+data.localId).child("journalEntries").set("");
+                    this.db.database.ref("users/"+data.localId).child("settings").set("");
+                    this.db.database.ref("users/"+data.localId+"/settings").child("work").set(25);
+                    this.db.database.ref("users/"+data.localId+"/settings").child("shortBreak").set(5);
+                    this.db.database.ref("users/"+data.localId+"/settings").child("longBreak").set(15);
+                    this.db.database.ref("users/"+data.localId+"/settings").child("interval").set(4);                   
+                }
             },
             error => {
-                console.log(error.error);
+                console.log(error.error.error.message);
             }
         );
         data.resetForm();
 
+        // Now create user and add user to the database
+        
     }
-
 
 }

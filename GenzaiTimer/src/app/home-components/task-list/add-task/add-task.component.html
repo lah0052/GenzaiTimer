@@ -1,8 +1,7 @@
-<div class="container" style="padding-left: 5vw;">
-    <form #taskForm="ngForm" (ngSubmit)="addTask(taskForm.value)">
+    <form #taskForm="ngForm" (ngSubmit)="onSubmit(taskForm)">
 
         <div class="input-group">
-            <input type="text" class="form-control" ngModel name="name">
+            <input type="text" class="form-control" ngModel name="name" placeholder="Enter Task">
         </div>
 
         <button class="btn btn-dark" type="submit">
@@ -10,4 +9,3 @@
         </button>
 
     </form>
-</div>

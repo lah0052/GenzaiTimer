@@ -22,6 +22,8 @@ export class AuthService {
             "password": password,
             "returnSecureToken": true
         };
+
+
         return this.http.post<AuthResponse>(this.baseUrl + ':' + this.signUpEndpoint + '?' + 'key=' + environment.firebase.apiKey, requestBody)
 
     }
