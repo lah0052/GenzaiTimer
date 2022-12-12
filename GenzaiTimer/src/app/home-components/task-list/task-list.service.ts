@@ -1,6 +1,5 @@
 import { Injectable } from "@angular/core";
 import { TaskListModel } from "./task-list-model.model"
-import {HttpClient} from "@angular/common/http"
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 
 @Injectable(
@@ -8,18 +7,22 @@ import { AngularFireDatabase } from '@angular/fire/compat/database';
 )
 
 export class TaskListService{
-    private BaseUrl: string = "https://genzaitimer-debfe-default-rtdb.firebaseio.com/";
-    private endPoint: string = "TaskList.json";
+    private user: string = "0";
     
     constructor(private db:AngularFireDatabase){
 
     }
 
     getTaskList(){
-        return this.db.list<TaskListModel>("TaskList").valueChanges();
+        return this.db.list<TaskListModel>("users/" + this.user + "/TaskList").valueChanges();
     }
 
     addTasks(task: TaskListModel){
-        this.db.list<TaskListModel>("TaskList").push(task);
+        if(task.name.length == 0){
+            return;
+        }
+        
+        this.db.list<TaskListModel>("users/" + this.user + "/TaskList").push(task);
+        location.reload();
     }
 }

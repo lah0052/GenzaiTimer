@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { TaskListModel } from '../task-list-model.model';
 import { TaskListService } from '../task-list.service';
 
@@ -15,10 +16,9 @@ export class AddTaskComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addTask(task: TaskListModel){
-    console.log("button clicked");
-    console.log(task);
-    this.ps.addTasks(task);
+  onSubmit(data: NgForm){
+    this.ps.addTasks(data.value);
+    data.resetForm;
   }
 
 }
