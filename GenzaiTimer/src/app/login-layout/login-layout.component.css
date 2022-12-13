@@ -2,10 +2,25 @@
     color: white;
     font-size: 83%;
     font-weight: bold;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Space Mono', monospace; 
 }
 .buttonBG {
     background-color: rgb(133, 192, 133);
     color: white;
     box-shadow: 0 0 15px rgb(216, 216, 216);
+    margin-right: 3;
+}
+
+.buttonBG2 {
+    color: white;
+    box-shadow: 0 0 15px rgb(216, 216, 216);
+    margin-right: 3;
+}
+.signout{
+    color: white;
+    font-size: 83%;
+    font-weight: bold;
+    font-family: 'Space Mono', monospace;
+    margin-left:25%;
+    margin-top:5%;
 }
