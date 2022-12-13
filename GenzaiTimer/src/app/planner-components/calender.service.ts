@@ -55,4 +55,19 @@ export class CalenderService{
          }
      }
      
+     removeCalender(calender: CalenderCardModel){
+      const auth = getAuth();
+      const user = auth.currentUser;
+
+      if(user)
+      {
+         this.db.database.ref("users/" + user.uid + "/eventEntries").remove();
+      }
+      else
+      {
+         this.db.database.ref("users/" + "0" + "/eventEntries").remove();
+      }
+      
+     }
+     
 } 
