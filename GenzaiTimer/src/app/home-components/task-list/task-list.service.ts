@@ -46,5 +46,6 @@ export class TaskListService{
         }     
         
         location.reload();
+        
     }
 }

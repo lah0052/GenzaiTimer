@@ -19,6 +19,7 @@ export class AddTaskComponent implements OnInit {
   onSubmit(data: NgForm){
     this.ps.addTasks(data.value);
     data.resetForm;
+    this.ps.getTaskList();
   }
 
 }
