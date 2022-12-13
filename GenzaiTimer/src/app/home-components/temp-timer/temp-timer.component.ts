@@ -25,7 +25,7 @@ export class TempTimerComponent {
 function calcDateDiff(time: number): 
 timeComponents {
 
-  let now = new Date()
+ // let now = new Date()
   const milliSecondsInASecond = 1000;
   const hoursInADay = 24;
   const minutesInAnHour = 60;
