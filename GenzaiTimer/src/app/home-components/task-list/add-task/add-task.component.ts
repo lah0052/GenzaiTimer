@@ -25,12 +25,10 @@ export class AddTaskComponent implements OnInit {
     const user = auth.currentUser;
 
     if(this.buttonClicked == 'AddTask'){
-      console.log("add");
       this.ps.addTasks(data.value);
       data.resetForm;
     }
     else if(this.buttonClicked == 'ClearTasks'){
-      console.log("clear");
       if(user){
         this.db.database.ref("users/" + user.uid + "/TaskList").remove();
         location.reload();
@@ -40,6 +38,7 @@ export class AddTaskComponent implements OnInit {
         location.reload();
       }
     }
+
   }
 
 }
