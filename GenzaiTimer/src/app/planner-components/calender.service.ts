@@ -1,7 +1,7 @@
 import {CalenderCardModel} from "./calender-card.model";
 import {Injectable} from "@angular/core";
 import {AngularFireDatabase} from '@angular/fire/compat/database';
-
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 @Injectable(
     {providedIn: 'root'}
 )
@@ -14,13 +14,45 @@ export class CalenderService{
      }
 
      getCalenders(){
-        return this.db.list<CalenderCardModel>("users/"+"0"+"/eventEntries").valueChanges();
+         const auth = getAuth();
+         const user = auth.currentUser;
+
+         if(user)
+         {
+            return this.db.list<CalenderCardModel>("users/"+user.uid+"/eventEntries").valueChanges();
+         }
+         else
+         {
+            return this.db.list<CalenderCardModel>("users/"+"0"+"/eventEntries").valueChanges();
+         }   
      }
+
      getCalender(index:number){
-        return this.db.list<CalenderCardModel>(this.baseUrl + this.calenderEndPoint + 'eventEntries' + '/' + index + '.json');
+         const auth = getAuth();
+         const user = auth.currentUser;
+
+         if(user)
+         {
+            return this.db.list<CalenderCardModel>("users/" + user.uid + "/eventEntries/" + index);    
+         }
+         else
+         {
+            return this.db.list<CalenderCardModel>("users/" + "0" + "/eventEntries/" + index);
+         }
      }
+
      addCalender(calender: CalenderCardModel){
-        this.db.list<CalenderCardModel>("users/"+"0"+"/eventEntries").push(calender);
+         const auth = getAuth();
+         const user = auth.currentUser;
+
+         if(user)
+         {
+            this.db.list<CalenderCardModel>("users/"+user.uid+"/eventEntries").push(calender);
+         }
+         else
+         {
+            this.db.list<CalenderCardModel>("users/"+"0"+"/eventEntries").push(calender);
+         }
      }
      
 } 
