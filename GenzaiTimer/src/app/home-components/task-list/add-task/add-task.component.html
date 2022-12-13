@@ -4,8 +4,12 @@
             <input type="text" class="form-control" ngModel name="name" placeholder="Enter Task">
         </div>
 
-        <button class="btn btn-dark" type="submit">
+        <button class="btn btn-dark" type="submit" (click)="buttonClicked='AddTask'">
             Add Task
+        </button>
+
+        <button class="btn btn-dark" type="submit" (click)="buttonClicked='ClearTasks'">
+            Clear Tasks
         </button>
 
     </form>
