@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable, OnInit } from "@angular/core";
 import { TaskListModel } from "./task-list-model.model"
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { getAuth } from "firebase/auth";
@@ -8,41 +8,43 @@ import { getAuth } from "firebase/auth";
 )
 
 export class TaskListService{
-    private user: string = "0";
+    private defaultUser: string = "0";
+    public auth = getAuth();
+    public user = this.auth.currentUser;
     
     constructor(private db:AngularFireDatabase){
-
+        
     }
 
     getTaskList(){
-        const auth = getAuth();
-        const user = auth.currentUser;
+        this.auth = getAuth();
+        this.user = this.auth.currentUser;
 
-        if(user)
+        if(this.user)
         {
-            return this.db.list<TaskListModel>("users/" + user.uid + "/TaskList").valueChanges();
+            return this.db.list<TaskListModel>("users/" + this.user.uid + "/TaskList").valueChanges();
         }
         else
         {
-            return this.db.list<TaskListModel>("users/" + this.user + "/TaskList").valueChanges();
+            return this.db.list<TaskListModel>("users/" + this.defaultUser + "/TaskList").valueChanges();
         }
     }
 
     addTasks(task: TaskListModel){
-        const auth = getAuth();
-        const user = auth.currentUser;
+        this.auth = getAuth();
+        this.user = this.auth.currentUser;
         
         if(task.name.length == 0){
             return;
         }
 
-        if(user)
+        if(this.user)
         {
-            this.db.list<TaskListModel>("users/" + user.uid + "/TaskList").push(task);
+            this.db.list<TaskListModel>("users/" + this.user.uid + "/TaskList").push(task);
         }
         else
         {
-            this.db.list<TaskListModel>("users/" + this.user + "/TaskList").push(task);
+            this.db.list<TaskListModel>("users/" + this.defaultUser + "/TaskList").push(task);
         }     
         
         location.reload();

@@ -1,18 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import {interval, Observable, TimeoutError} from "rxjs";
-import {map, shareReplay} from "rxjs/operators";  
+import {map, shareReplay} from "rxjs/operators"; 
+
+let i = 0;
 
 @Component({
   selector: 'app-temp-timer',
   templateUrl: './temp-timer.component.html',
-  styleUrls: ['./temp-timer.component.css']
+  styleUrls: ['./temp-timer.component.css'],
 })
-
 
 export class TempTimerComponent {
 
+
   constructor() { 
-    let current_time = Date.now()
+    //let thirtyminsinmilisec = 1000*60*30;
+    var current_time = 1000*60*30;
+
     this.timeLeft$ = interval(1000).pipe(
       map(x => calcDateDiff(current_time)),
         shareReplay(1)
@@ -22,16 +26,17 @@ export class TempTimerComponent {
   public timeLeft$: Observable<timeComponents>;
 }
 
-function calcDateDiff(time: number): 
+function calcDateDiff(time:number): 
 timeComponents {
-
+  i=i+1000;
  // let now = new Date()
   const milliSecondsInASecond = 1000;
   const hoursInADay = 24;
   const minutesInAnHour = 60;
   const secondsInAMinute = 60;
+  //let startValue = 1000*60*30; //30 mins, 15 mins, or 5 mins
 
-  let timeDifference =  time - Date.now()+1000*60*30
+  let timeDifference =  time -i;
   if(timeDifference < 0)
     timeDifference = 0 
 
