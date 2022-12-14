@@ -8,3 +8,41 @@
   font-size: 2em;
   margin: 0 3px 0 15px;
 }
+.cardFormat {
+  height: 40vh;
+  width: 40vw;
+  background-color:white;
+}
+.topButtonFormat{
+  margin-right: 3%;
+}
+.timerFormat{
+  margin-top: 3%;
+  margin-left: 37%;
+  width: 30vh;
+  margin-bottom: 3%;
+  background-color: rgb(133, 192, 133);
+  box-shadow: 0 0 15px rgb(133, 192, 133);
+  border-color: rgb(133, 192, 133);
+}
+.bottomButtonFormat{
+  margin-left: 40%;
+}
+.eachBottomButtonFormat{
+  margin-right: 3%;
+}
+.playButtonFormat{
+  background-color:green;
+  border-color: transparent;
+ 
+}
+.pauseButtonFormat{
+  background-color: rgb(255,193,7);
+  border-color: transparent;
+ 
+}
+.resetButtonFormat{
+  background-color: red;
+  border-color: transparent;
+  
+}
