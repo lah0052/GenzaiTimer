@@ -49,7 +49,7 @@ export class TempTimerComponent {
           this.fiveteenMinutesInMiliseconds = this.longBreak*60*1000; //15 mins ms
           this.current_time = this.thirtyMinutesInMiliseconds;
         } else {
-          this.thirtyMinutesInMiliseconds = 30*60*1000; //30 mins ms
+          this.thirtyMinutesInMiliseconds = 25*60*1000; //30 mins ms
           this.fiveMinutesInMiliseconds = 5*60*1000;   //5 mins ms
           this.fiveteenMinutesInMiliseconds = 15*60*1000;
           this.current_time = this.thirtyMinutesInMiliseconds;
@@ -60,7 +60,7 @@ export class TempTimerComponent {
       });
     }
     else{
-      this.thirtyMinutesInMiliseconds = 30*60*1000; //30 mins ms
+      this.thirtyMinutesInMiliseconds = 25*60*1000; //30 mins ms
       this.fiveMinutesInMiliseconds = 5*60*1000;   //5 mins ms
       this.fiveteenMinutesInMiliseconds = 15*60*1000;
       this.current_time = this.thirtyMinutesInMiliseconds;
