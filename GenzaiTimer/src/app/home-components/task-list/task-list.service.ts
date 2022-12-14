@@ -49,8 +49,6 @@ export class TaskListService{
             this.db.list<TaskListModel>("users/" + this.defaultUser + "/TaskList").push(task);
         }     
         
-        // location.reload();
-        // location.reload();
         this.router.navigateByUrl('/settings', {skipLocationChange: true}).then(() =>{
             this.router.navigate(['/home']);
         });
