@@ -44,6 +44,13 @@ export class SettingsLayoutComponent {
         console.error(error);
       });
     }
+    else{
+      this.work = 25;
+      this.shortBreak = 5;
+      this.longBreak = 15;
+      this.interval = 4;
+  
+    }
   }
 
 
