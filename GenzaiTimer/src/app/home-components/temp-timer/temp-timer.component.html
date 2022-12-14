@@ -1,4 +1,4 @@
-<div class="timer" *ngIf="(timeLeft$ | async) as t; else sorry">
+<div class="timer" *ngIf="(timeLeft | async) as t; else sorry">
 	<div>
 		<h4> Count down timer </h4>
 		<span id="minutes"> {{t.minutesToDday}} </span>Min
@@ -7,9 +7,14 @@
 
 	<div>
 		<button class="btn btn-dark" (click)="startFunction()">Start</button>
+		<button class="btn btn-dark" (click)="stopFunction()">Pause</button>
+		<button class="btn btn-dark" (click)="resetFunction()">Reset</button>
+		<button class="btn btn-dark" (click)="thirtyMinWorkFunction()">Work</button>
+		<button class="btn btn-dark" (click)="longBreakFunction()">LongBreak</button>
+		<button class="btn btn-dark" (click)="shortBreakFunction()">ShortBreak</button>
 	</div>
 </div>
 
 <ng-template #sorry>
-	Sorry, something went wrong...
+	LOADING
 </ng-template>
