@@ -6,12 +6,17 @@
 <div class="d-flex container">
   <a routerLink="/auth" routerLinkActive="active">
     <button type="button" class="btn nav-item buttonBG nav-item login">
-      LOG IN or Sign UP
-    </button>
-    
+      Log In or Sign Up
+    </button>  
   </a>
 
 </div>
-<button type="button" class="btn btn-warning nav-item buttonBG2 signout">
+
+
+
+<form #outForm="ngForm" (ngSubmit)="signOut()">
+<button type="submit" class="btn btn-warning nav-item buttonBG2 signout" (click)="buttonClicked='SignOut'">
   Sign Out
  </button>
+
+</form>

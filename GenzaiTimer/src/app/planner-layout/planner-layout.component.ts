@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CalenderCardModel } from '../planner-components/calender-card.model';
 import { CalenderService } from '../planner-components/calender.service';
 
@@ -11,7 +12,7 @@ export class PlannerLayoutComponent implements OnInit {
 
   calenders: CalenderCardModel [] = [];
 
-  constructor(private calenderService:CalenderService) { }
+  constructor(private calenderService:CalenderService, private ps:CalenderService, private router:Router) { }
 
   ngOnInit(): void {
     this.calenderService.getCalenders().subscribe((data: CalenderCardModel []) => {
@@ -21,6 +22,12 @@ export class PlannerLayoutComponent implements OnInit {
         this.calenders.push(calender);
       }  
     });
+  }
+  removeCalender(calender:CalenderCardModel){
+    this.ps.removeCalender(calender);
+    
+    location.reload();
+
   }
 
   

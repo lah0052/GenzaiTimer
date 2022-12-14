@@ -19,8 +19,5 @@ export class AddEventComponent implements OnInit {
     this.ps.addCalender(calender);
     this.router.navigate(['/planner']);
   }
-  removeCalender(calender: CalenderCardModel){
-   
 
-  }
 }
