@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {interval, Observable, TimeoutError} from "rxjs";
 import {map, shareReplay} from "rxjs/operators"; 
 
+var global_current_time = 30*60*1000; //start timer at 30
+var global_isStopped = true;
+var global_secondsCountDown = 0;
+
 @Component({
   selector: 'app-temp-timer',
   templateUrl: './temp-timer.component.html',
@@ -11,12 +15,12 @@ import {map, shareReplay} from "rxjs/operators";
 
 export class TempTimerComponent {
   //global vars for my functions
-  secondsCountDown = 0; //incrememnts by 1000 every second (1000 miliseconds)
+  secondsCountDown = global_secondsCountDown; //incrememnts by 1000 every second (1000 miliseconds)
   thirtyMinutesInMiliseconds = 30*60*1000; //30 mins ms
   fiveMinutesInMiliseconds = 5*60*1000;   //5 mins ms
   fiveteenMinutesInMiliseconds = 15*60*1000; //15 mins ms
-  isStopped:boolean = true; //is the timer stopped? var used for pausing
-  current_time = this.thirtyMinutesInMiliseconds; //timer will start on 30, this var gets updated.
+  isStopped = global_isStopped; //is the timer stopped? var used for pausing
+  current_time = global_current_time; //timer will start on 30, this var gets updated.
 
 
 
@@ -68,9 +72,12 @@ export class TempTimerComponent {
     const secondsInAMinute = 60;
   
     let timeDifference =  time - this.secondsCountDown; //time difference will represent what time is left on the clock.
-    if(timeDifference < 0) { //we dont want negative numbers on our timer. 
+    if(timeDifference <= 0) { //we dont want negative numbers on our timer. 
       timeDifference = 0;
-      this.isStopped = true;
+      
+      if(time = this.thirtyMinutesInMiliseconds) {
+
+      }
     }
   
     const daysToDday = Math.floor(
@@ -93,14 +100,20 @@ export class TempTimerComponent {
       Math.floor(timeDifference / milliSecondsInASecond) % secondsInAMinute;
   
   
+
     if (this.isStopped == false) {
       this.secondsCountDown=this.secondsCountDown+1000;
     }
+
+    global_current_time = this.current_time;
+    global_isStopped = this.isStopped;
+    global_secondsCountDown = this.secondsCountDown;
+
+
+
     return { secondsToDday, minutesToDday, hoursToDday, daysToDday };
   }
   
-
-
 
 }
 interface timeComponents {
