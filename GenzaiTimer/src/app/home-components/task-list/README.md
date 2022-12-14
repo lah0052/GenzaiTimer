@@ -4,7 +4,7 @@
 The task list is a tool that can be used to keep track of all the
 goals that you want to complete in a session. The task list is
 located at the top right of the page and lists each task in a
-horizontial column.
+vertical column.
 
 ## How To Use
 #### Add Task:
@@ -15,4 +15,9 @@ into the form then click the button that says "Add Task".
 Below the task list there is a button that says "Clear Tasks."
 Pressing this button will clear all of the tasks from the task list.
 
-Screenshot
+## Build Status
+Completed
+
+## Screenshot
+Below is an image of the component
+/src/tasklist.png

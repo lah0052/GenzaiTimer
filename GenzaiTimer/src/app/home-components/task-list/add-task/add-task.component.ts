@@ -39,13 +39,12 @@ export class AddTaskComponent implements OnInit {
       }
       else{
         this.db.database.ref("users/0/TaskList").remove();
-        
+
         this.router.navigateByUrl('/settings', {skipLocationChange: true}).then(() =>{
           this.router.navigate(['/home']);
         });
       }
     }
-
   }
 
 }
