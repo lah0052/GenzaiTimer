@@ -5,7 +5,7 @@ import {interval, Observable, TimeoutError} from "rxjs";
 import {map, shareReplay} from "rxjs/operators"; 
 
 
-var global_current_time = 30*60*1000; //start timer at 30
+var global_current_time = 25*60*1000; //start timer at 30
 var global_isStopped = true;
 var global_secondsCountDown = 0;
 
