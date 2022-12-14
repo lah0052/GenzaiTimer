@@ -1,10 +1,16 @@
 <div  >
+	<div class="btn-group btn-group-toggle" data-toggle="buttons" style = "margin-left: 32%;margin-top: 10%">
+		<label class="btn btn-secondary "  (click)="thirtyMinWorkFunction()">
+		  <input type="radio" name="options" id="option1" autocomplete="off" checked> Work
+		</label>
+		<label class="btn btn-secondary" (click)="longBreakFunction()">
+		  <input type="radio" name="options" id="option2" autocomplete="off"> LongBreak
+		</label>
+		<label class="btn btn-secondary" (click)="shortBreakFunction()">
+		  <input type="radio" name="options" id="option3" autocomplete="off"> ShortBreak
+		</label>
+	  </div>
 
-<div style = "margin-left: 32%;margin-top: 10%">
-<button class="btn btn-dark nav-item topButtonFormat " (click)="thirtyMinWorkFunction()">Work</button>
-<button class="btn btn-dark nav-item topButtonFormat" (click)="longBreakFunction()">LongBreak</button>
-<button class="btn btn-dark nav-item topButtonFormat" (click)="shortBreakFunction()">ShortBreak</button>
-</div>
 
 <div class="timer card nav-item timerFormat" *ngIf="(timeLeft | async) as t; else sorry">
 	<div>
