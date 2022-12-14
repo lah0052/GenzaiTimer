@@ -11,6 +11,14 @@
     margin-bottom: 7vh;
     
 }
+.imgstf{
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+.div{
+    margin-top: 450%;
+}
 
 .buttonFormat{
     border-width: .1vw;

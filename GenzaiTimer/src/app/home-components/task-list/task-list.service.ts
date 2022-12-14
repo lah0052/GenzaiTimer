@@ -1,7 +1,9 @@
-import { Injectable, OnInit } from "@angular/core";
+import { Injectable} from "@angular/core";
 import { TaskListModel } from "./task-list-model.model"
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { getAuth } from "firebase/auth";
+import { Router} from '@angular/router';
+
 
 @Injectable(
     {providedIn: 'root'}
@@ -12,7 +14,7 @@ export class TaskListService{
     public auth = getAuth();
     public user = this.auth.currentUser;
     
-    constructor(private db:AngularFireDatabase){
+    constructor(private db:AngularFireDatabase, private router:Router){
         
     }
 
@@ -30,7 +32,7 @@ export class TaskListService{
         }
     }
 
-    addTasks(task: TaskListModel){
+    addTasks(task: TaskListModel | {name: ''}){
         this.auth = getAuth();
         this.user = this.auth.currentUser;
         
@@ -47,7 +49,10 @@ export class TaskListService{
             this.db.list<TaskListModel>("users/" + this.defaultUser + "/TaskList").push(task);
         }     
         
-        location.reload();
-        
+        // location.reload();
+        // location.reload();
+        this.router.navigateByUrl('/settings', {skipLocationChange: true}).then(() =>{
+            this.router.navigate(['/home']);
+        });
     }
 }
