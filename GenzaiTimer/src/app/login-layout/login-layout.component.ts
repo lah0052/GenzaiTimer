@@ -1,21 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from "@angular/forms";
 import { NgForOf } from "@angular/common";
 import { Observable } from 'rxjs';
 import { loginService } from './login.service';
 import { loginResponse } from './loginResponse';
+import { getAuth, signOut } from '@angular/fire/auth';
+import { UserInforComponent } from '../user-infor/user-infor.component';
 
 @Component({
   selector: 'app-login-layout',
   templateUrl: './login-layout.component.html',
   styleUrls: ['./login-layout.component.css']
 })
-export class LoginLayoutComponent {
+
+export class LoginLayoutComponent implements OnInit{
 
   public buttonClicked!:string;
     private loginObservable!: Observable<loginResponse>;
 
     constructor(private loginService:loginService) {
+      
+    }
+
+    ngOnInit(): void {
 
     }
 
@@ -43,9 +50,23 @@ export class LoginLayoutComponent {
 
     }
 
+    public signOut()
+    {
+        const auth = getAuth();
+        
+        signOut(auth).then(() => {
+            console.log("User Signed Out.");
+            location.reload();
+        }).catch((error) => {
+            console.log("User could not be signed out / No user signed in" + error);
+    });
+    }
+
 
  
 
   
 
 }
+
+

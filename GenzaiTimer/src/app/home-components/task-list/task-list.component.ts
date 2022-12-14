@@ -7,17 +7,13 @@ import { TaskListService } from './task-list.service';
   templateUrl: './task-list.component.html',
   styleUrls: ['./task-list.component.css']
 })
-export class TaskListComponent implements OnInit {
+export class TaskListComponent{
   @Input() name: string;
   
 
   constructor(private ps:TaskListService) {
     this.name = "No Task"
    }
-
-  ngOnInit(): void {
-    
-  }
 
   onRemove(data: NgForm){
     this.ps.addTasks(data.value);
