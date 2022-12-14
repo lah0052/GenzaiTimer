@@ -6,6 +6,7 @@ import { PlannerLayoutComponent } from './planner-layout/planner-layout.componen
 import { SettingsLayoutComponent } from './settings-layout/settings-layout.component';
 import { AddEventComponent } from './planner-components/event/add-event/add-event.component';
 import { AuthComponent } from './auth/auth.component';
+import { AddEvent2Component } from './journal-components/event/add-event2/add-event2.component';
 
 
 
@@ -18,6 +19,9 @@ const routes: Routes = [
   {path: "settings", component: SettingsLayoutComponent},
   {path: "event", component: AddEventComponent},
   {path: "auth", component:AuthComponent},
+  {path: "addjournal", component:AddEvent2Component},
+  
+
 
 
 ];
