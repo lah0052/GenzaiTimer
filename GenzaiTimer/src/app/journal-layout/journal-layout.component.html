@@ -11,7 +11,7 @@
 <div class="d-flex flex-column" style="margin-left: 45vw; margin-top: -5vh; width: 7%;">
   <form #postForm="ngForm" (ngSubmit)="removeJournal(postForm.value)">
       <button class="btn btn-dark" type="submit" [disabled]="!postForm.valid">
-          Clear Events
+          Clear Journal Entries
       </button>
   </form>
 </div>
