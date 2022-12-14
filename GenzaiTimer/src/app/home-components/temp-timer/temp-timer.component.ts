@@ -27,7 +27,6 @@ export class TempTimerComponent {
   fiveteenMinutesInMiliseconds = this.longBreak*60*1000; //15 mins ms
   isStopped = global_isStopped; //is the timer stopped? var used for pausing
   current_time = global_current_time; //timer will start on 30, this var gets updated.
-  global_current_time = this.thirtyMinutesInMiliseconds;
 
   constructor() { 
    this.timeLeft = interval(1000).pipe(     //interval is a function that infinitely runs once every second when passed the parameter 1000.
@@ -63,12 +62,14 @@ export class TempTimerComponent {
       });
     }
     else{
-      this.work = 25;
-      this.shortBreak = 5;
-      this.longBreak = 15;
+      this.thirtyMinutesInMiliseconds = 30*60*1000; //30 mins ms
+      this.fiveMinutesInMiliseconds = 5*60*1000;   //5 mins ms
+      this.fiveteenMinutesInMiliseconds = 15*60*1000;
+      global_current_time = this.thirtyMinutesInMiliseconds;
   
     }
   }
+
   public timeLeft: Observable<timeComponents>; //an observable is a subscribe/publish-esque data type. used for updating
   //in the html, one of the data types is a timeLeft
 
@@ -113,10 +114,6 @@ export class TempTimerComponent {
     let timeDifference =  time - this.secondsCountDown; //time difference will represent what time is left on the clock.
     if(timeDifference <= 0) { //we dont want negative numbers on our timer. 
       timeDifference = 0;
-      
-      if(time = this.thirtyMinutesInMiliseconds) {
-
-      }
     }
   
     const daysToDday = Math.floor(
