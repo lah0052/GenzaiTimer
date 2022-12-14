@@ -29,9 +29,7 @@ export class TempTimerComponent {
   current_time = global_current_time; //timer will start on 30, this var gets updated.
 
   constructor() { 
-   this.timeLeft = interval(1000).pipe(     //interval is a function that infinitely runs once every second when passed the parameter 1000.
-      map(x => this.calcDateDiff(this.current_time)) //the map is used to constantly run the function with interval.
-    );
+   
     
     const auth = getAuth();
     const user = auth.currentUser;
@@ -49,12 +47,12 @@ export class TempTimerComponent {
           this.thirtyMinutesInMiliseconds = this.work*60*1000; //30 mins ms
           this.fiveMinutesInMiliseconds = this.shortBreak*60*1000;   //5 mins ms
           this.fiveteenMinutesInMiliseconds = this.longBreak*60*1000; //15 mins ms
-          global_current_time = this.thirtyMinutesInMiliseconds;
+          this.current_time = this.thirtyMinutesInMiliseconds;
         } else {
           this.thirtyMinutesInMiliseconds = 30*60*1000; //30 mins ms
           this.fiveMinutesInMiliseconds = 5*60*1000;   //5 mins ms
           this.fiveteenMinutesInMiliseconds = 15*60*1000;
-          global_current_time = this.thirtyMinutesInMiliseconds;
+          this.current_time = this.thirtyMinutesInMiliseconds;
           
         }
       }).catch((error) => {
@@ -65,9 +63,13 @@ export class TempTimerComponent {
       this.thirtyMinutesInMiliseconds = 30*60*1000; //30 mins ms
       this.fiveMinutesInMiliseconds = 5*60*1000;   //5 mins ms
       this.fiveteenMinutesInMiliseconds = 15*60*1000;
-      global_current_time = this.thirtyMinutesInMiliseconds;
+      this.current_time = this.thirtyMinutesInMiliseconds;
   
     }
+
+    this.timeLeft = interval(1000).pipe(     //interval is a function that infinitely runs once every second when passed the parameter 1000.
+      map(x => this.calcDateDiff(this.current_time)) //the map is used to constantly run the function with interval.
+    );
   }
 
   public timeLeft: Observable<timeComponents>; //an observable is a subscribe/publish-esque data type. used for updating
@@ -116,17 +118,6 @@ export class TempTimerComponent {
       timeDifference = 0;
     }
   
-    const daysToDday = Math.floor(
-      timeDifference /
-        (milliSecondsInASecond * minutesInAnHour * secondsInAMinute * hoursInADay)
-    );
-  
-    const hoursToDday = Math.floor(
-      (timeDifference /
-        (milliSecondsInASecond * minutesInAnHour * secondsInAMinute)) %
-        hoursInADay
-    );
-  
     const minutesToDday = Math.floor(
       (timeDifference / (milliSecondsInASecond * minutesInAnHour)) %
         secondsInAMinute
@@ -147,63 +138,11 @@ export class TempTimerComponent {
 
 
 
-    return { secondsToDday, minutesToDday, hoursToDday, daysToDday };
+    return { secondsToDday, minutesToDday };
   }
   
-
 }
 interface timeComponents {
   secondsToDday: number;
   minutesToDday: number;
-  hoursToDday: number;
-  daysToDday: number;
 }
-
-
-/* function calcDateDiff(time:number): 
-timeComponents {
-
- // let now = new Date()
-  const milliSecondsInASecond = 1000;
-  const hoursInADay = 24;
-  const minutesInAnHour = 60;
-  const secondsInAMinute = 60;
-  //let startValue = 1000*60*30; //30 mins, 15 mins, or 5 mins
-
-  let timeDifference =  time -secondsCountDown;
-  if(timeDifference < 0)
-    timeDifference = 0 
-
-  const daysToDday = Math.floor(
-    timeDifference /
-      (milliSecondsInASecond * minutesInAnHour * secondsInAMinute * hoursInADay)
-  );
-
-  const hoursToDday = Math.floor(
-    (timeDifference /
-      (milliSecondsInASecond * minutesInAnHour * secondsInAMinute)) %
-      hoursInADay
-  );
-
-  const minutesToDday = Math.floor(
-    (timeDifference / (milliSecondsInASecond * minutesInAnHour)) %
-      secondsInAMinute
-  );
-
-  const secondsToDday =
-    Math.floor(timeDifference / milliSecondsInASecond) % secondsInAMinute;
-
-
-  if (isStopped) {
-    secondsCountDown=secondsCountDown+1000;
-  }
-  return { secondsToDday, minutesToDday, hoursToDday, daysToDday };
-}
-
-interface timeComponents {
-  secondsToDday: number;
-  minutesToDday: number;
-  hoursToDday: number;
-  daysToDday: number;
-}
-*/

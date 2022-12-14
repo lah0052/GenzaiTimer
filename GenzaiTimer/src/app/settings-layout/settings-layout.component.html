@@ -10,7 +10,7 @@
                         
                         <hr class="my-4" />
                         <strong class="mb-0">Duration</strong>
-                        <p>Control the duration of work time and break time.</p>
+                        <p>Control the duration of work time and break time. Durations cannot exceed 60 minutes.</p>
                         <div class="list-group mb-5 shadow">
                             <div class="list-group-item">
                                 <div class="row align-items-center">
@@ -20,7 +20,7 @@
                                     </div>
                                     <div class="col-auto">
                                         <div class="custom-control custom-switch">
-                                            <input type="number" class="form-control" ngModel name="work" id="alert2" value="25" size="2" style="text-align:right;" placeholder={{work}} required/>
+                                            <input type="number" min="0" max="59" class="form-control" ngModel name="work" id="alert2" value="25" size="2" style="text-align:right;" placeholder={{work}} required/>
                                             
                                         </div>
                                     </div>
@@ -34,7 +34,7 @@
                                     </div>
                                     <div class="col-auto">
                                         <div class="custom-control custom-switch">
-                                            <input type="number" class="form-control" ngModel name="shortBreak" id="alert2" value="5" size="2" style="text-align:right;" placeholder={{shortBreak}} required/>
+                                            <input type="number" min="0" max="59" class="form-control" ngModel name="shortBreak" id="alert2" value="5" size="2" style="text-align:right;" placeholder={{shortBreak}} required/>
                                             
                                         </div>
                                     </div>
@@ -48,7 +48,7 @@
                                     </div>
                                     <div class="col-auto">
                                         <div class="custom-control custom-switch">
-                                            <input type="number" class="form-control" ngModel name="longBreak" id="alert2" value="15" size="2" style="text-align:right;" placeholder={{longBreak}} required/>
+                                            <input type="number" min="0" max="59" class="form-control" ngModel name="longBreak" id="alert2" value="15" size="2" style="text-align:right;" placeholder={{longBreak}} required/>
                                             
                                         </div>
                                     </div>
@@ -67,7 +67,7 @@
                                     </div>
                                     <div class="col-auto">
                                         <div class="custom-control custom-switch">
-                                            <input type="number" class="form-control" ngModel name="interval" id="alert2" value="4" size="2" style="text-align:right;" placeholder={{interval}} required/>
+                                            <input type="number" min="0" max="59" class="form-control" ngModel name="interval" id="alert2" value="4" size="2" style="text-align:right;" placeholder={{interval}} required/>
                                         </div>
                                     </div>
                                 </div>
