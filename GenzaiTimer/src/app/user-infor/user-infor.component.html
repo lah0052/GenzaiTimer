@@ -1,89 +1,93 @@
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 100%;
-  border-radius: 5px;
-  margin-bottom: 5%;;
-}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 5%;
+      ;
+    }
 
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
 
-img {
-  border-radius: 5px 5px 0 0;
-}
+    img {
+      border-radius: 5px 5px 0 0;
+    }
 
-.container {
-  padding: 2px 16px;
-}
-.login{
-    color: white;
-    font-size: 83%;
-    font-weight: bold;
-    font-family: 'Space Mono', monospace; 
-}
-.buttonBG {
-    background-color: rgb(133, 192, 133);
-    color: white;
-    box-shadow: 0 0 15px rgb(216, 216, 216);
-    margin-right: 3;
-}
+    .container {
+      padding: 2px 16px;
+    }
 
-.buttonBG2 {
-    color: white;
-    box-shadow: 0 0 15px rgb(216, 216, 216);
-    margin-right: 3;
-}
-.signout{
-    color: white;
-    font-size: 83%;
-    font-weight: bold;
-    font-family: 'Space Mono', monospace;
-    margin-left:25%;
-    margin-top:5%;
-}
+    .login {
+      color: white;
+      font-size: 83%;
+      font-weight: bold;
+      font-family: 'Space Mono', monospace;
+    }
 
-</style>
+    .buttonBG {
+      background-color: rgb(133, 192, 133);
+      color: white;
+      box-shadow: 0 0 15px rgb(216, 216, 216);
+      margin-right: 3;
+    }
+
+    .buttonBG2 {
+      color: white;
+      box-shadow: 0 0 15px rgb(216, 216, 216);
+      margin-right: 3;
+    }
+
+    .signout {
+      color: white;
+      font-size: 83%;
+      font-weight: bold;
+      font-family: 'Space Mono', monospace;
+      margin-left: 25%;
+      margin-top: 5%;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="card">
- 
-  <div class="container info">
-    <h4><b>User:</b></h4> 
-    <p>{{email}}</p> 
+  <div class="card">
+
+    <div class="container info">
+      <h4><b>User:</b></h4>
+      <p>{{email}}</p>
+    </div>
   </div>
-</div>
 
-<div class="d-flex container">
-  <a routerLink="/auth" routerLinkActive="active">
-    <button type="button" class="btn nav-item buttonBG nav-item login">
-      Log In or Sign Up
-    </button>  
-  </a>
+  <div stlye="background-color: rgb(255, 242, 204)">
+    <div class="d-flex container">
+      <a routerLink="/auth" routerLinkActive="active">
+        <button type="button" class="btn nav-item buttonBG nav-item login">
+          Log In or Sign Up
+        </button>
+      </a>
 
-</div>
-
-
-
-<form #outForm="ngForm" (ngSubmit)="signOut()">
-<button type="submit" class="btn btn-warning nav-item buttonBG2 signout" (click)="buttonClicked='SignOut'">
-  Sign Out
- </button>
-
-</form>
+    </div>
 
 
+
+    <form #outForm="ngForm" (ngSubmit)="signOut()">
+      <button type="submit" class="btn btn-warning nav-item buttonBG2 signout" (click)="buttonClicked='SignOut'">
+        Sign Out
+      </button>
+
+    </form>
+
+  </div>
 
 </body>
-</html> 
+
+</html>
 
 <!DOCTYPE html>
-
-
-
