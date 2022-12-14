@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { getAuth } from 'firebase/auth';
+import { getDatabase, ref, child, get } from 'firebase/database';
 import {interval, Observable, TimeoutError} from "rxjs";
 import {map, shareReplay} from "rxjs/operators"; 
+
 
 var global_current_time = 30*60*1000; //start timer at 30
 var global_isStopped = true;
@@ -15,20 +18,56 @@ var global_secondsCountDown = 0;
 
 export class TempTimerComponent {
   //global vars for my functions
+  work = 25;
+  shortBreak = 5;
+  longBreak = 15;
   secondsCountDown = global_secondsCountDown; //incrememnts by 1000 every second (1000 miliseconds)
-  thirtyMinutesInMiliseconds = 30*60*1000; //30 mins ms
-  fiveMinutesInMiliseconds = 5*60*1000;   //5 mins ms
-  fiveteenMinutesInMiliseconds = 15*60*1000; //15 mins ms
+  thirtyMinutesInMiliseconds = this.work*60*1000; //30 mins ms
+  fiveMinutesInMiliseconds = this.shortBreak*60*1000;   //5 mins ms
+  fiveteenMinutesInMiliseconds = this.longBreak*60*1000; //15 mins ms
   isStopped = global_isStopped; //is the timer stopped? var used for pausing
   current_time = global_current_time; //timer will start on 30, this var gets updated.
-
-
+  global_current_time = this.thirtyMinutesInMiliseconds;
 
   constructor() { 
    this.timeLeft = interval(1000).pipe(     //interval is a function that infinitely runs once every second when passed the parameter 1000.
       map(x => this.calcDateDiff(this.current_time)) //the map is used to constantly run the function with interval.
     );
     
+    const auth = getAuth();
+    const user = auth.currentUser;
+
+    const dbRef = ref(getDatabase());
+
+    if(user)
+    {
+      get(child(dbRef, "users/" + user.uid + "/settings/")).then((snapshot) => {
+        if(snapshot.exists()) {
+          console.log(snapshot.val());
+          this.work = snapshot.child("work").val();
+          this.shortBreak = snapshot.child("shortBreak").val();
+          this.longBreak = snapshot.child("longBreak").val();
+          this.thirtyMinutesInMiliseconds = this.work*60*1000; //30 mins ms
+          this.fiveMinutesInMiliseconds = this.shortBreak*60*1000;   //5 mins ms
+          this.fiveteenMinutesInMiliseconds = this.longBreak*60*1000; //15 mins ms
+          global_current_time = this.thirtyMinutesInMiliseconds;
+        } else {
+          this.thirtyMinutesInMiliseconds = 30*60*1000; //30 mins ms
+          this.fiveMinutesInMiliseconds = 5*60*1000;   //5 mins ms
+          this.fiveteenMinutesInMiliseconds = 15*60*1000;
+          global_current_time = this.thirtyMinutesInMiliseconds;
+          
+        }
+      }).catch((error) => {
+        console.error(error);
+      });
+    }
+    else{
+      this.work = 25;
+      this.shortBreak = 5;
+      this.longBreak = 15;
+  
+    }
   }
   public timeLeft: Observable<timeComponents>; //an observable is a subscribe/publish-esque data type. used for updating
   //in the html, one of the data types is a timeLeft
