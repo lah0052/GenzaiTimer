@@ -9,13 +9,14 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 export class SettingsService
 {
+    
     constructor(private db: AngularFireDatabase) {
 
     }
 
     getSettings()
     {
-
+        
     }
 
     changeSettings(settings: SettingsModel)
@@ -30,13 +31,14 @@ export class SettingsService
                 this.db.database.ref("users/" + uid + "/settings/interval").set(settings.interval);
                 this.db.database.ref("users/" + uid + "/settings/shortBreak").set(settings.shortBreak);
                 this.db.database.ref("users/" + uid + "/settings/longBreak").set(settings.longBreak);
-            }
-            else{
+        }
+        else
+        {
                 console.log("No user logged in, data pushed to default");
                 this.db.database.ref("users/" + "0" + "/settings/work").set(settings.work);
                 this.db.database.ref("users/" + "0" + "/settings/interval").set(settings.interval);
                 this.db.database.ref("users/" + "0" + "/settings/shortBreak").set(settings.shortBreak);
                 this.db.database.ref("users/" + "0" + "/settings/longBreak").set(settings.longBreak);
-            }
+        }
     }
 }

@@ -39,3 +39,13 @@
     color: white;
     box-shadow: 0 0 15px rgb(216, 216, 216);
 }
+.txt{
+    margin-left:40%;
+    margin-top:5%;
+    color: rgb(133, 192, 133);
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+    width:30%;
+    font-size:257%;
+  
+  }
