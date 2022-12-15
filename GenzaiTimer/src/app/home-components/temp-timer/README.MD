@@ -25,3 +25,6 @@ Pressing the button labeled short break will start the short break timer.  The d
 
 ## Image
 
+![CS-230 Genzai temp timer component](https://user-images.githubusercontent.com/111936234/207761647-1a4bc255-949f-4e55-b332-14abe75c5b0e.png)
+
+
