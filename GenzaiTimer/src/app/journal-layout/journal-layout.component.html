@@ -1,6 +1,6 @@
 <div *ngFor="let journal of journals">
-  <app-calender title={{journal.title}} description={{journal.description}}
-      ></app-calender>
+  <app-journal title={{journal.title}} description={{journal.description}}
+      ></app-journal>
 </div>
 <div class="d-flex flex-column" style="margin-left: 52vw; margin-top: 2vh;">
   <a routerLink="/addjournal" routerLinkActive="active">

@@ -18,8 +18,6 @@ import { FormsModule } from '@angular/forms';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-
-
 import { AddTaskComponent } from './home-components/task-list/add-task/add-task.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth,getAuth } from '@angular/fire/auth';
@@ -29,6 +27,7 @@ import { AddEventComponent } from './planner-components/event/add-event/add-even
 import { AuthComponent } from './auth/auth.component';
 import { UserInforComponent } from './user-infor/user-infor.component';
 import { AddEvent2Component } from './journal-components/event/add-event2/add-event2.component';
+import { JournalComponent } from './journal-components/journal/journal/journal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +46,8 @@ import { AddEvent2Component } from './journal-components/event/add-event2/add-ev
     AddEventComponent,
     AuthComponent,
     UserInforComponent,
-    AddEvent2Component
+    AddEvent2Component,
+    JournalComponent
   ],
   imports: [
     BrowserModule,

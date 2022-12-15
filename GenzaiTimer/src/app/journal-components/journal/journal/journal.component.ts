@@ -14,8 +14,8 @@ export class JournalComponent implements OnInit {
   @Input() description: string;
 
   constructor(private ps:JournalService, private router:Router) {
-    this.title = "no title given or loading error";
-    this.description = "no description given or loading error";
+    this.title = "";
+    this.description = "";
    }
 
   ngOnInit(): void {
