@@ -22,7 +22,7 @@ Planner Page:
 
 Journal Page:
 
-![CS-230 Genzai Journal Page](https://user-images.githubusercontent.com/111936234/207761243-7bfba331-1b4a-414d-b66c-154a1689689f.png)
+![CS-230 Genzai Journal Page](https://user-images.githubusercontent.com/111936234/207762256-4d3bbb33-0b45-47db-b0c3-186f791b9cb4.png)
 
 Settings Page:
 
