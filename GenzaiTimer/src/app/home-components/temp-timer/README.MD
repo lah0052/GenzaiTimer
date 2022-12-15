@@ -24,5 +24,4 @@ Pressing the button labeled long break will start the long break timer.  The def
 Pressing the button labeled short break will start the short break timer.  The default value of the short break timer is 5 minutes.
 
 ## Image
-Screenshot from 2022-12-14 15-45-50.png
-Screenshot from 2022-12-14 15-45-50.png
+![image](https://user-images.githubusercontent.com/100103819/207761404-569ffda2-45ba-44dc-a7db-dc5a5ed34656.png)
