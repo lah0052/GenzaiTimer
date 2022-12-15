@@ -45,8 +45,8 @@ Settings Page:
   - Motivates the user to press on with uplifting messages
 
 ## How to Use
-
-[ User Manual Here ]
+Follow a link below to the user manual
+https://docs.google.com/document/d/1i5SRz69EA0boqifJlTOLl1DAsWNpeucqzqRpekefdiU/edit?usp=share_link
 
 ## Credits
 
