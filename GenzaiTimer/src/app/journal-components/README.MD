@@ -13,5 +13,4 @@ Clicking the button labeled "Clear Journal" will clear all of the current entrie
 Clicking the "Add Journal Entry" will prompt the user to add a title for the journal entry and a description of the journal entry
 
 ##Image
-<img width="1046" alt="Screen Shot 2022-12-14 at 9 22 06 PM" src="https://user-images.githubusercontent.com/35176302/207757404-0650923a-e294-4ab3-865a-4f657304dfd8.png">
-<img width="886" alt="Screen Shot 2022-12-14 at 9 22 11 PM" src="https://user-images.githubusercontent.com/35176302/207757413-7ed9beca-777d-4e90-a8ec-59c7cbc15e22.png">
+<img width="1464" alt="Screen Shot 2022-12-14 at 11 02 48 PM" src="https://user-images.githubusercontent.com/35176302/207770039-395833bc-95fb-4562-9db2-845524016639.png">
