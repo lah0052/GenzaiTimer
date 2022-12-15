@@ -9,4 +9,8 @@ If a user logs in they're settings are automatically used for the timer and if n
 
 ## How to Use
 
-To use the settings page the user simply needs to enter their desired values into the given fields. For example if the user inputted 20 in the field labeled work then the work timer would start at 20 minutes. All fields must have entered values.
+To use the settings page the user simply needs to enter their desired values into the given fields. For example if the user inputted 20 in the field labeled work then the work timer would start at 20 minutes. All fields must have entered values from 0 to 59.
+
+## Screenshot
+
+![image](https://user-images.githubusercontent.com/112131964/207767270-0aba99a6-b8ba-4ab6-ac76-e46e097e146e.png)
