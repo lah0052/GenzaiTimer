@@ -12,7 +12,21 @@ This application uses Google's Firebase service for three main purposes. The fir
 
 ## Screenshots
 
-[ Screenshots Here ]
+Home page:
+
+![CS-230 Genzai Home Page](https://user-images.githubusercontent.com/111936234/207761121-319a3ebf-3a25-4c8b-a166-ea9d33d40cc6.png)
+
+Planner Page:
+
+![CS-230 Genzai Events Page](https://user-images.githubusercontent.com/111936234/207761184-b12af62a-23a8-49c1-950c-076300f6a46f.png)
+
+Journal Page:
+
+![CS-230 Genzai Journal Page](https://user-images.githubusercontent.com/111936234/207761243-7bfba331-1b4a-414d-b66c-154a1689689f.png)
+
+Settings Page:
+
+![CS-230 Genzai Settings Page](https://user-images.githubusercontent.com/111936234/207761282-002bdb75-0fc3-4ee2-a6b2-b56230031288.png)
 
 ## Features
 - Task List
