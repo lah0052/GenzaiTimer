@@ -17,4 +17,4 @@ Pressing this button will clear all of the tasks from the task list.
 
 ## Screenshot
 Below is an image of the component
-/src/tasklist.png
+![image](https://user-images.githubusercontent.com/111769309/207760743-7678007e-3acc-4d35-a99f-038c131d7874.png)
