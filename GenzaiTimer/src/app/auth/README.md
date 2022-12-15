@@ -1,7 +1,7 @@
 ## Authentication
 
 ## Description
-The authentication feature allows the user to signup/login using their email and a password. This connects each user with their own personal data via the Firebase's Realtime Database. The user can then completely personalize the website's other features to help them be more productive! After the work is done, the use can then sign out.
+The authentication feature allows the user to signup/login using their email and a password. This connects each user with their own personal data via the Firebase's Realtime Database. The user can then completely personalize the website's other features to help them be more productive! After the work is done, the user can then sign out.
 
 ## How to Use?
 - Log In or Sign Up
