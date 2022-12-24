@@ -10,7 +10,7 @@ The Pomodoro technique is a time management method used by countless people. Its
 
 ## Backend
 
-This application uses Google's Firebase service for three main purposes. The first is hosting the live version of the website which allows our webapp to exist on more than a development server. Along with this we use firebase to authenticate and store data for each individual user. Users each have their own task list entries, journal entries, event entries, and timer settings. 
+This application uses Google's Firebase service for three main purposes. The first is hosting the live version of the website which allows our webapp to exist on more than a development server. Along with this, we use firebase to authenticate and store data for each individual user. Users each have their own task list entries, journal entries, event entries, and timer settings. 
 
 ## Screenshots
 
